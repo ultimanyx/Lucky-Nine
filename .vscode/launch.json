@@ -3,11 +3,19 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Lucky Nine",
+            "name": "1) Server (Host PC only)",
+            "request": "launch",
+            "mainClass": "LuckyNineServer",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "java",
+            "name": "2) Client (every PC)",
             "request": "launch",
             "mainClass": "Main",
-            "vmArgs": "--module-path \"C:\\Users\\Education\\Desktop\\MOIST Bachelor of Science in Information Technology\\BSIT 2nd year\\4 Final\\Comp.Prog.3 (Event Driven Programming)\\Improvement 2\\Lucky-Nine-main\\javafx-sdk-27\\lib\" --add-modules javafx.controls",
-            "args": ""
+            "vmArgs": "--module-path \"${workspaceFolder}\\javafx-sdk-27\\lib\" --add-modules javafx.controls,javafx.media",
+            "classPaths": ["${workspaceFolder}\\bin", "${workspaceFolder}\\assets"],
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
